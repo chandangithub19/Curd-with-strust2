@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.ap.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="struts-default" >
+
+		<action name="addrecord" class="action.EmployeeAction" method="addEmp">
+			<result name="success">/index.jsp</result>
+			 <result name="input">/index.jsp</result> 	
+		</action>
+		
+		<action name="curdrecord" class="action.EmployeeAction">
+			<result name="success">/curd.jsp</result>
+			<result name="input">/curd.jsp</result>  	
+		</action>
+ 		
+		
+		<action name="curd" class="action.EmployeeAction">
+			<result name="success">/index.jsp</result>	
+			<result name="input">/index.jsp</result>
+		</action>
+ 		
+		<action name="report" class="action.EmployeeAction" method="getEmp">
+		<result name="success">/view.jsp</result>
+		<result name="input">/view.jsp</result>
+		</action>
+		
+		<action name="deleterecord" class="action.EmployeeAction" method="delete">
+		<result name="success" type="redirect">report</result>
+		</action>
+		
+		<action name="updatedetails" class="action.EmployeeAction" method="beforeUpdate">
+		<result name="success">/update.jsp</result>
+		</action>
+		
+		<action name="updatedetail" class="action.EmployeeAction" method="update">
+		<result name="success">/update.jsp</result>
+		</action>
+		
+		
+	</package>
+</struts>

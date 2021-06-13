@@ -1,0 +1,50 @@
+/*<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE validators PUBLIC   
+        "-//OpenSymphony Group//XWork Validator 1.0.2//EN"   
+        "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">  
+    
+<validators>  
+          
+        <field name="name">  
+        <field-validator type="requiredstring">  
+        <message>Name can't be blank</message>  
+        </field-validator>  
+        </field>  
+          
+          
+          <field name="mobile">  
+        <field-validator type="requiredstring">  
+        <message>MobileNo can't be blank</message>  
+        </field-validator>   
+        <field-validator type="regex">  
+        <param name="expression">^([7-9]{1})([0-9]{9})$</param>  
+        <message>Mobile No must be start with 9 or 8 or 7</message>  
+        </field-validator>  
+        </field>  */  
+         
+          
+          <field name="email">  
+        <field-validator type="requiredstring">  
+        <message>Email Id can't be blank</message>  
+        </field-validator>  
+        <field-validator type="email">  
+        <message>Please enter correct email id</message>  
+        </field-validator>  
+          
+        </field>  
+        
+         <field name="dob">  
+        <field-validator type="requiredstring">  
+        <message>DOB can't be blank</message>  
+        </field-validator>  
+        </field> 
+        
+        <!-- <field name="dob">  
+        <field-validator type="date">  
+        <param name="min">01/01/2000</param>  
+        <param name="max">19/07/2019</param>    
+        <message>Date of Birth must be between ${min} to ${max}</message>  
+        </field-validator>  
+        </field>  -->
+          
+        </validators>  
